@@ -1,12 +1,5 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  
   <div class="sidebar sticky">
-    <div style="text-align: center;">
-      <a href="http://hits.dwyl.com/khw11044.github.io" target="_blank">
-        <img
-          src="http://hits.dwyl.com/khw11044githubio.svg">
-      </a>
-</div>
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}
