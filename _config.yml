@@ -24,7 +24,7 @@ description              : "돈 많이 벌고싶당"
 url                      : "https://pushpull7381.github.io"
 baseurl                  : # 서브 경로가 있는 경우 기재
 repository               : "pushpull7381/blog-comments"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/bio-photo-keyboard.jpg"
+teaser                   : "/assets/images/profile.jpg"
 logo                     : # 최상단 메뉴 바에 사이트 로고 넣기
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -75,7 +75,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/bio-photo-keyboard.jpg"
+og_image                 : "/assets/images/profile.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
