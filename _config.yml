@@ -280,7 +280,11 @@ defaults:
       related: true
       toc_ads: true
       toc_sticky: true
-
+    ---
+    author_profile: true
+    sidebar:
+      nav: "main"
+    ---
   # _pages
   - scope:
       path: ""
@@ -293,8 +297,4 @@ defaults:
       share: true
       related: false
 
----
-author_profile: true
-sidebar:
-  nav: "main"
----
+
