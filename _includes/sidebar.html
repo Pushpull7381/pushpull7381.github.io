@@ -6,6 +6,12 @@
       {% if s.image %}
         <img src="{{ s.image | relative_url }}"
              alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+         <div style="text-align: center;">
+      <a href="http://hits.dwyl.com/pushpull7381.github.io" target="_blank">
+        <img
+          src="http://hits.dwyl.com/pushpull7381githubio.svg">
+      </a>
+</div>
       {% endif %}
       {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
@@ -16,10 +22,5 @@
     {% endif %}
   {% endif %}
   </div>
-  <div style="text-align: center;">
-      <a href="http://hits.dwyl.com/khw11044.github.io" target="_blank">
-        <img
-          src="http://hits.dwyl.com/khw11044githubio.svg">
-      </a>
-</div>
+ 
 {% endif %}
