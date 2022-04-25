@@ -297,4 +297,8 @@ nav: "main"
       share: true
       related: false
 
-
+---
+author_profile: true
+sidebar:
+nav: "main"
+---
