@@ -3,7 +3,7 @@ layout: archive
 ---
 
 {{ content }}
-
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fpushpull7381.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 {% assign categories_max = 0 %}
 {% for category in site.categories %}
   {% if category[1].size > categories_max %}
@@ -37,11 +37,7 @@ layout: archive
         </div>
         <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
-        <div style="text-align: center;">
-      <a href="http://hits.dwyl.com/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}" target="_blank">
-        <img src="http://hits.dwyl.com/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}.svg" />
-      </a>
-  </div> 
+      
     {% endif %}
   {% endfor %}
 {% endfor %}
