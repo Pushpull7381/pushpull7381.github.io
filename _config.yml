@@ -296,9 +296,7 @@ nav: "main"
       comments: false
       share: true
       related: false
+      sidebar:
+        nav: "categories"
 
----
-author_profile: true
-sidebar:
-nav: "main"
----
+
