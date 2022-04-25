@@ -8,3 +8,20 @@ main:
 #    url: /tags/
 #  - title: "year-archive"
 #    url: /year-achive/
+
+
+categories:
+  - title: "C/C++"
+    url: /categories/c-cpp/
+  - title: "Python"
+    url: /categories/python/
+  - title: "Algorithm"
+    url: /categories/algorithm/
+  - title: "Web"
+    url: /categories/web/
+  - title: "Git"
+    url: /categories/git/
+  - title: "GitHub Blog"
+    url: /categories/github-blog/
+  - title: "Machine Learning"
+    url: /categories/machine-learning/
