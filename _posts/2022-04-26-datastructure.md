@@ -8,7 +8,7 @@ tags:
 - [DataStructure, PriorityQueue, Queue]
 use_math: true
 
-permalink: /Data-Structure/Priority-Queue
+permalink: /categories/Data-Structure/Priority-Queue
 
 toc: true
 toc_sticky: true
