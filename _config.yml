@@ -281,7 +281,7 @@ defaults:
       toc_ads: true
       toc_sticky: true
       sidebar:
-        nav: "main"
+       # nav: "main"
 #---
 #author_profile: true
 #sidebar:
@@ -299,4 +299,4 @@ defaults:
       share: true
       related: false
       sidebar:
-        nav: "categories"
+        #nav: "categories"
