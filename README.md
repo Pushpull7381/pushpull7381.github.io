@@ -1,3 +1,4 @@
+> https://github.com/devinlife 님의 github.io를 fork하여 만든 블로그 입니당
 # [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
