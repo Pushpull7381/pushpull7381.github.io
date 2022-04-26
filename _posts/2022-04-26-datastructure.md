@@ -71,7 +71,7 @@ Algorithm PS-Sort(S,C) // C: 비교자
     - removeMin: 가장 작은 값을 찾아서 삭제해주는 것 → `O(n) time`
     - min: 가장 작은 값을 return 해주는 것 → `O(n) time`
     
-    ### Selection Sort(선택 정렬)
+     **Selection Sort(선택 정렬)**
     
     1. n번의 insert: priority queue에 삽입해줘야됨 → `O(n) time`
     2. removeMin → 한 번 할 때마다 size가 1씩 줄어듦
@@ -94,7 +94,7 @@ Algorithm PS-Sort(S,C) // C: 비교자
     - insert의 경우 최악의 경우(위의 경우에서 0이 삽입되었을 때 가장 앞까지 와야됨)에 `O(n) time`
     - removeMin, Min → head로 바로 접근 가능 → `O(1) time`
     
-    ### Insertion Sort(삽입 정렬)
+    **Insertion Sort(삽입 정렬)**
     
     1. insert를 할 때마다 정렬된 상태를 유지함 
         1. 첫번째 insert → 1
