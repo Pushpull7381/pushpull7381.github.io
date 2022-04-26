@@ -12,7 +12,7 @@ main:
 
 categories:
   - title: "C/C++"
-    url: /categories/c-cpp/
+    url: /categories/c--cpp/
   - title: "Python"
     url: /categories/python/
   - title: "Algorithm"
