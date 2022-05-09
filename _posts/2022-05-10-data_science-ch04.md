@@ -1,0 +1,77 @@
+---
+title: "데이터과학 ch04"
+excerpt: "책 제목: 밑바닥부터 시작하는 데이터과학"
+
+categories:
+- DataScience
+tags:
+- [DataScience]
+use_math: true
+
+permalink: /categories/DataScience/Ch04
+
+toc: true
+toc_sticky: true
+
+date: 2022-05-10
+last_modified_at: 2022-05-10
+---
+
+# 선형대수
+## 1. 벡터
+- 벡터란, 벡터끼리 더하거나 상수끼리 곱해지면 새로운 벡터를 생성하는 개념적인 도구
+- 어떤 유한한 차원의 공간에 존재하는 점
+- 벡터를 가장 간단하게 표현하는 방법은 `List`이다.
+- ex. 키, 몸무게, 나이를 3차원의 벡터로 표현가능함. 
+    ```python
+    from typing import List
+    Vector = List[float]
+
+    height_weight_age = [70, # 인치,
+                        170, # 파운드,
+                        40 ] #나이
+    ```
+
+- 벡터의 산술연산은 `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
+    ```python
+    # 더하기
+    def add(v: Vector, w:Vector) -> Vector:
+        assert len(v) == len(w), "vectors must be the same length"
+        return [v_i + w_i for v_i, w_i in zip(v, w)]
+
+    assert add([1, 2, 3], [4, 5, 6] == [5, 7, 9]) 
+
+    # 빼기
+    def substract(v: Vector, w:Vector) -> Vector:
+        assert len(v) == len(w), "vectors must be the same length"
+        return [v_i - w_i for v_i, w_i in zip(v, w)]
+
+    assert add([5, 7, 9], [4, 5, 6] == [1, 2, 3]) 
+
+    # 모든 성분 더하기
+    def vector_sum(vectors: List[Vector]) -> Vector:
+        assert vectors, "no vectors provieded!"
+
+        num_elements = len(vectors[0])
+        assert all(len(v) == num_elements for v in vectors), "different sizes!"
+
+        return [sum(vector[i] for vector in vectors)
+                for i in range(num_elements)]
+
+    assert vector_sum([[1, 2], [3, 4], [5, 6], [7, 8]]) == [16, 20]
+
+    # 모든 성분에 scalar c 곱하기
+    def scalar_multiply(c: float, v: Vector) -> Vector:
+        return [c* v_i for v_i in v]
+
+    assert scalar_multiply(2, [1, 2, 3]) == [2, 4, 6]
+
+    # 모든 성분 평균 구하기
+    def vector_mean(vectors: List[Vector]) -> Vector:
+        n = len(vectors)
+        return scalar_multiply(1/n, vector_msum(vectors))
+
+    assert vector_mean([1, 2], [3, 4], [5, 6]) == [3, 4]
+    ```
+
+
