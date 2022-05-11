@@ -131,6 +131,7 @@ def squared_distance(v: Vector, w: Vector)-> float:
 ## Python 코드로 나타내기
 
 ### (열의 개수, 행의 개수)를 반환
+
 ```python
 from typing import Tuple
 def shape(A: Matrix) -> Tuple[int, int]:
