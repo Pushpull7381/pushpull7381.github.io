@@ -33,6 +33,7 @@ last_modified_at: 2022-05-11
 
 ## 벡터의 산술연산
     - `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
+
 ### 더하기
     ```python
     # 더하기
@@ -42,6 +43,7 @@ last_modified_at: 2022-05-11
 
     assert add([1, 2, 3], [4, 5, 6] == [5, 7, 9]) 
     ```
+
 ### 빼기
     ```python
     def substract(v: Vector, w:Vector) -> Vector:
@@ -50,6 +52,7 @@ last_modified_at: 2022-05-11
 
     assert add([5, 7, 9], [4, 5, 6] == [1, 2, 3]) 
     ```
+
 ### 모든 성분 더하기
     ```python
     def vector_sum(vectors: List[Vector]) -> Vector:
@@ -63,6 +66,7 @@ last_modified_at: 2022-05-11
 
     assert vector_sum([[1, 2], [3, 4], [5, 6], [7, 8]]) == [16, 20]
     ```
+
 ### 모든 성분에 scalar c 곱하기
     ```python
     def scalar_multiply(c: float, v: Vector) -> Vector:
@@ -70,6 +74,7 @@ last_modified_at: 2022-05-11
 
     assert scalar_multiply(2, [1, 2, 3]) == [2, 4, 6]
     ```
+    
 ### 모든 성분 평균 구하기
     ```python
     def vector_mean(vectors: List[Vector]) -> Vector:
