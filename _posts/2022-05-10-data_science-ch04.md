@@ -32,7 +32,7 @@ last_modified_at: 2022-05-11
     ```
 
 ## 벡터의 산술연산
-    - `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
+- `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
 
 ### 더하기
     ```python
@@ -74,7 +74,7 @@ last_modified_at: 2022-05-11
 
     assert scalar_multiply(2, [1, 2, 3]) == [2, 4, 6]
     ```
-    
+
 ### 모든 성분 평균 구하기
     ```python
     def vector_mean(vectors: List[Vector]) -> Vector:
@@ -95,23 +95,23 @@ last_modified_at: 2022-05-11
     assert dot([1, 2, 3], [4, 5, 6]) == 32
     ```
 
-    - 내적을 사용하여 벡터의 크기 계산하기
-        ```python
-        import math
+### 내적을 사용하여 벡터의 크기 계산하기
+    ```python
+    import math
 
-        def sum_of_squares(v: Vector) -> float:
-            return dot(v, v)
-        
-        def magnitude(v: Vector) -> float:
-            return math.sqrt(sum_of_squares(v)) # math.sqrt()는 제곱근을 계산해주는 함수
-        
-        assert magnitude([3, 4]) == 5
-        ```
-    - 두 벡터간의 거리
-        ```python
-        def squared_distance(v: Vector, w: Vector)-> float:
-            return magnitude(substract(v, w))
-        ```
+    def sum_of_squares(v: Vector) -> float:
+        return dot(v, v)
+    
+    def magnitude(v: Vector) -> float:
+        return math.sqrt(sum_of_squares(v)) # math.sqrt()는 제곱근을 계산해주는 함수
+    
+    assert magnitude([3, 4]) == 5
+    ```
+### 두 벡터간의 거리
+    ```python
+    def squared_distance(v: Vector, w: Vector)-> float:
+        return magnitude(substract(v, w))
+    ```
 
 # 행렬(Matrix)
 - 2차원으로 구성된 숫자의 집합
