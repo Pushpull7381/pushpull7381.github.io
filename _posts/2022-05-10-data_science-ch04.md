@@ -31,8 +31,8 @@ last_modified_at: 2022-05-11
                         40 ] #나이
     ```
 
-## 벡터의 산술연산
-- `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
+## Python code로 나타내기
+- 벡터의 산술연산은 `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
 
 ### 더하기
 ```python
@@ -127,7 +127,7 @@ def squared_distance(v: Vector, w: Vector)-> float:
         [3, 4],
         [5, 6]] # 3행 2열
     ```
-
+## Python 코드로 나타내기
 ### (열의 개수, 행의 개수)를 반환
 ```python
 from typing import Tuple
