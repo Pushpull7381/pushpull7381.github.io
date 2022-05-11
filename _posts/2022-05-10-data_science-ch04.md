@@ -35,83 +35,83 @@ last_modified_at: 2022-05-11
 - `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
 
 ### 더하기
-    ```python
-    # 더하기
-    def add(v: Vector, w:Vector) -> Vector:
-        assert len(v) == len(w), "vectors must be the same length"
-        return [v_i + w_i for v_i, w_i in zip(v, w)]
+```python
+# 더하기
+def add(v: Vector, w:Vector) -> Vector:
+    assert len(v) == len(w), "vectors must be the same length"
+    return [v_i + w_i for v_i, w_i in zip(v, w)]
 
-    assert add([1, 2, 3], [4, 5, 6] == [5, 7, 9]) 
-    ```
+assert add([1, 2, 3], [4, 5, 6] == [5, 7, 9]) 
+```
 
 ### 빼기
-    ```python
-    def substract(v: Vector, w:Vector) -> Vector:
-        assert len(v) == len(w), "vectors must be the same length"
-        return [v_i - w_i for v_i, w_i in zip(v, w)]
+```python
+def substract(v: Vector, w:Vector) -> Vector:
+    assert len(v) == len(w), "vectors must be the same length"
+    return [v_i - w_i for v_i, w_i in zip(v, w)]
 
-    assert add([5, 7, 9], [4, 5, 6] == [1, 2, 3]) 
-    ```
+assert add([5, 7, 9], [4, 5, 6] == [1, 2, 3]) 
+```
 
 ### 모든 성분 더하기
-    ```python
-    def vector_sum(vectors: List[Vector]) -> Vector:
-        assert vectors, "no vectors provieded!"
+```python
+def vector_sum(vectors: List[Vector]) -> Vector:
+    assert vectors, "no vectors provieded!"
 
-        num_elements = len(vectors[0])
-        assert all(len(v) == num_elements for v in vectors), "different sizes!"
+    num_elements = len(vectors[0])
+    assert all(len(v) == num_elements for v in vectors), "different sizes!"
 
-        return [sum(vector[i] for vector in vectors)
-                for i in range(num_elements)]
+    return [sum(vector[i] for vector in vectors)
+            for i in range(num_elements)]
 
-    assert vector_sum([[1, 2], [3, 4], [5, 6], [7, 8]]) == [16, 20]
-    ```
+assert vector_sum([[1, 2], [3, 4], [5, 6], [7, 8]]) == [16, 20]
+```
 
 ### 모든 성분에 scalar c 곱하기
-    ```python
-    def scalar_multiply(c: float, v: Vector) -> Vector:
-        return [c* v_i for v_i in v]
+```python
+def scalar_multiply(c: float, v: Vector) -> Vector:
+    return [c* v_i for v_i in v]
 
-    assert scalar_multiply(2, [1, 2, 3]) == [2, 4, 6]
-    ```
+assert scalar_multiply(2, [1, 2, 3]) == [2, 4, 6]
+```
 
 ### 모든 성분 평균 구하기
-    ```python
-    def vector_mean(vectors: List[Vector]) -> Vector:
-        n = len(vectors)
-        return scalar_multiply(1/n, vector_msum(vectors))
+```python
+def vector_mean(vectors: List[Vector]) -> Vector:
+    n = len(vectors)
+    return scalar_multiply(1/n, vector_msum(vectors))
 
-    assert vector_mean([1, 2], [3, 4], [5, 6]) == [3, 4]
-    ```
+assert vector_mean([1, 2], [3, 4], [5, 6]) == [3, 4]
+```
 
 ## 내적(dot product)
-    ```python
-    def dot(v: Vector, w: Vector) -> float:
-        # v_1 * w_1 + ... v_n * w_n 
-        assert len(v) == len(w), "vectors must be same length"
+```python
+def dot(v: Vector, w: Vector) -> float:
+    # v_1 * w_1 + ... v_n * w_n 
+    assert len(v) == len(w), "vectors must be same length"
 
-        return sum(v_i * w_i for v_i, w_i in zip(v, w))
-        
-    assert dot([1, 2, 3], [4, 5, 6]) == 32
-    ```
+    return sum(v_i * w_i for v_i, w_i in zip(v, w))
+    
+assert dot([1, 2, 3], [4, 5, 6]) == 32
+```
 
 ### 내적을 사용하여 벡터의 크기 계산하기
-    ```python
-    import math
+```python
+import math
 
-    def sum_of_squares(v: Vector) -> float:
-        return dot(v, v)
-    
-    def magnitude(v: Vector) -> float:
-        return math.sqrt(sum_of_squares(v)) # math.sqrt()는 제곱근을 계산해주는 함수
-    
-    assert magnitude([3, 4]) == 5
-    ```
+def sum_of_squares(v: Vector) -> float:
+    return dot(v, v)
+
+def magnitude(v: Vector) -> float:
+    return math.sqrt(sum_of_squares(v)) # math.sqrt()는 제곱근을 계산해주는 함수
+
+assert magnitude([3, 4]) == 5
+```
 ### 두 벡터간의 거리
-    ```python
-    def squared_distance(v: Vector, w: Vector)-> float:
-        return magnitude(substract(v, w))
-    ```
+```python
+def squared_distance(v: Vector, w: Vector)-> float:
+    return magnitude(substract(v, w))
+```
 
 # 행렬(Matrix)
 - 2차원으로 구성된 숫자의 집합
