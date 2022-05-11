@@ -127,7 +127,9 @@ def squared_distance(v: Vector, w: Vector)-> float:
         [3, 4],
         [5, 6]] # 3행 2열
     ```
+
 ## Python 코드로 나타내기
+
 ### (열의 개수, 행의 개수)를 반환
 ```python
 from typing import Tuple
@@ -159,7 +161,7 @@ assert identity_matrix(5) == [[1, 0, 0, 0, 0],
 ```
 
 ### 행렬이 중요한 이유
-1. 각 벡터를 행렬의 행으로 나타내어 여러 백터로 구성된 데이터셋을 행렬로 표현 가능
-2. k차원의 벡터를 n차원의 벡터로 변환해주는 선형함수를 $n \times k$ 행렬로 표현 가능
+1. 각 벡터를 행렬의 행으로 나타내어 여러 백터로 구성된 데이터셋을 행렬로 표현 가능함
+2. k차원의 벡터를 n차원의 벡터로 변환해주는 선형함수를 $n \times k$ 행렬로 표현 가능함
 3. 이진관계(binary relationship)을 행렬로 나타낼 수 있음
 
