@@ -32,7 +32,8 @@ last_modified_at: 2022-05-11
                         40 ] #나이
     ```
 
-- 벡터의 산술연산은 `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
+- 벡터의 산술연산
+    - `zip`을 사용하여 두 벡터를 묶은 뒤, 각 성분에 리스트 컴프티헨션을 적용
     - 더하기
         ```python
         # 더하기
@@ -79,4 +80,47 @@ last_modified_at: 2022-05-11
         assert vector_mean([1, 2], [3, 4], [5, 6]) == [3, 4]
         ```
 
+- 내적(dot product)
+    ```python
+    def dot(v: Vector, w: Vector) -> float:
+        # v_1 * w_1 + ... v_n * w_n 
+        assert len(v) == len(w), "vectors must be same length"
 
+        return sum(v_i * w_i for v_i, w_i in zip(v, w))
+        
+    assert dot([1, 2, 3], [4, 5, 6]) == 32
+    ```
+
+    - 내적을 사용하여 벡터의 크기 계산하기
+        ```python
+        import math
+
+        def sum_of_squares(v: Vector) -> float:
+            return dot(v, v)
+        
+        def magnitude(v: Vector) -> float:
+            return math.sqrt(sum_of_squares(v)) # math.sqrt()는 제곱근을 계산해주는 함수
+        
+        assert magnitude([3, 4]) == 5
+        ```
+    - 두 벡터간의 거리
+        ```python
+        def squared_distance(v: Vector, w: Vector)-> float:
+            return magnitude(substract(v, w))
+        ```
+
+## 행렬(Matrix)
+- `행렬`
+    - 2차원으로 구성된 숫자의 집합
+    - 리스트의 리스트로 표현 가능 
+    - 수학에서는 1행, 1열이 첫번째 행, 열이지만 python에서는 0행, 0열이 첫번째 행, 열임
+    ```python
+    Matrix = List[List[float]]
+
+    A = [[1, 2, 3],
+         [4, 5, 6]] # 2행 3열
+    
+    B = [[1, 2],
+         [3, 4],
+         [5, 6]] # 3행 2열
+    ```
