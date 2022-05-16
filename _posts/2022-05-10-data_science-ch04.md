@@ -50,7 +50,7 @@ def substract(v: Vector, w:Vector) -> Vector:
     assert len(v) == len(w), "vectors must be the same length"
     return [v_i - w_i for v_i, w_i in zip(v, w)]
 
-assert add([5, 7, 9], [4, 5, 6] == [1, 2, 3]) 
+assert add([5, 7, 9], [4, 5, 6]) == [1, 2, 3] 
 ```
 
 ### 모든 성분 더하기
