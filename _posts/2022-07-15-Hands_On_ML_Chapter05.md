@@ -1,9 +1,9 @@
 ---
-title: "Chapter05.Support Vector Machines"
-excerpt: "Hands On Machine Learning"
+title: "Kotlin 겅부"
+excerpt: "Kotlin in action"
 
 categories:
-- ML
+- machine-learning
 tags:
 - [HandsOnML], [SVM]
 use_math: true
