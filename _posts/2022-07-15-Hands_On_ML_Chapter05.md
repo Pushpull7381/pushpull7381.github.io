@@ -8,7 +8,7 @@ tags:
 - [HandsOnML], [SVM]
 use_math: true
 
-permalink: /categories/ML/SVM
+permalink: /categories/machine-learning/HandsOn
 
 toc: true
 toc_sticky: true
